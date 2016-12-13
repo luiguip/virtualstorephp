@@ -1,4 +1,5 @@
 <?php include("header.php") ?>
+<?php include("connect.php") ?>
   <?php
    function insertProduct($name,$price,$connection){
      $query = "insert into products (name,price) values ('{$name}',{$price})";
@@ -6,7 +7,6 @@
    }
    $name = $_GET["name"];
    $price = $_GET["price"];
-   $connection = mysqli_connect('localhost','root','toor','store');
    if(insertProduct($name, $price, $connection)){
   ?>
     <p class="text-success">Product <?php echo $name ?> , <?php echo $price ?>$ added with success!</p>
