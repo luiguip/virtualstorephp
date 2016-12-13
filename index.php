@@ -1,8 +1,3 @@
-<html>
-  <head>
-    <title>Index</title>
-  </head>
-  <body>
-    Hello
-  </body>
-</html>
+<?php include("header.php") ?>
+  <h1>Hello</h1>
+<?php include("footer.php") ?>
