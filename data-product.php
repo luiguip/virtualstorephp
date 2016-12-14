@@ -13,3 +13,8 @@
      $query = "insert into products (name,price) values ('{$name}',{$price})";
      return mysqli_query($connection,$query);
    }
+
+   function deleteProduct($id,$connection){
+     $query = "delete from products where id = {$id}";
+     return mysqli_query($connection,$query);
+   }
