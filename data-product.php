@@ -9,8 +9,8 @@
     return $products;
   }
 
-   function insertProduct($name,$price,$connection){
-     $query = "insert into products (name,price) values ('{$name}',{$price})";
+   function insertProduct($name,$price,$description,$connection){
+     $query = "insert into products (name,price,description) values ('{$name}',{$price}, '{$description}')";
      return mysqli_query($connection,$query);
    }
 

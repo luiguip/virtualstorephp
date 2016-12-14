@@ -19,13 +19,19 @@
   ?>
     <tr>
       <td>
-        <?php echo $product['name'] . "<br/>"; ?>
+        <?= $product['name'] ?>
       </td>
       <td>
-        <?php echo $product['price'] . "<br/>"; ?>
+        <?= $product['price'] ?>
       </td>
       <td>
-        <a class="text-danger" href="remove-product.php?id=<?= $product['id']?>">remove</a>
+        <?= substr($product['description'], 0, 40) ?>
+      </td>
+      <td>
+        <form  action="remove-product.php" method="post">
+          <input type="hidden" name="id" value="<?= $product['id']?>">
+          <button class="btn btn-danger" >remove</button>
+        </form>
       </td>
     </tr>
   <?php

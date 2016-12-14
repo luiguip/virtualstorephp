@@ -1,6 +1,6 @@
 <?php include("header.php") ?>
   <h1>Product Form</h1>
-  <form action="newproduct.php">
+  <form action="newproduct.php" method="post">
     <table class="table">
       <tr>
         <td>Name:</td>
@@ -10,6 +10,9 @@
         <td>Price:</td>
         <td><input type="number" class="form-control" name="price"></td>
       </tr>
+      <tr>
+        <td>Description:</td>
+        <td><textarea name="description" class="form-control"></textarea></td>
       <tr>
         <td><input type="submit" class="btn btn-primary" value="register"></td>
       </tr>

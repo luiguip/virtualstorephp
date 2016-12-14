@@ -1,8 +1,8 @@
 <?php
   include("connect.php");
   include("data-product.php");
-  $id=$_GET['id'];
+  $id=$_POST['id'];
   deleteProduct($id,$connection);
-  header("Location: productlist.php");
+  header("Location: productlist.php?removed=true");
   die();
 ?>

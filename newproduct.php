@@ -2,9 +2,10 @@
 <?php
   include("connect.php");
   include("data-product.php");
- $name = $_GET["name"];
- $price = $_GET["price"];
- if(insertProduct($name, $price, $connection)){
+ $name = $_POST["name"];
+ $price = $_POST["price"];
+ $description = $_POST["description"];
+ if(insertProduct($name, $price, $description, $connection)){
 ?>
   <p class="text-success">Product <?php echo $name ?> , <?php echo $price ?>$ added with success!</p>
 <?php
