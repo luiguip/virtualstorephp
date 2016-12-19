@@ -5,7 +5,8 @@
  $name = $_POST["name"];
  $price = $_POST["price"];
  $description = $_POST["description"];
- if(insertProduct($name, $price, $description, $connection)){
+ $category_id=$_POST["category_id"];
+ if(insertProduct($name, $price, $description, $category_id, $connection)){
 ?>
   <p class="text-success">Product <?php echo $name ?> , <?php echo $price ?>$ added with success!</p>
 <?php

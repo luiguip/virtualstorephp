@@ -28,6 +28,9 @@
         <?= substr($product['description'], 0, 40) ?>
       </td>
       <td>
+        <?=$product['category_name']?>
+      </td>
+      <td>
         <form  action="remove-product.php" method="post">
           <input type="hidden" name="id" value="<?= $product['id']?>">
           <button class="btn btn-danger" >remove</button>
